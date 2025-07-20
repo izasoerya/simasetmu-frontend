@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
 import com.google.maps.android.compose.GoogleMap
+import com.google.maps.android.compose.MapProperties
 
 @Composable
 fun DashboardScreen(
@@ -17,7 +18,12 @@ fun DashboardScreen(
 	Column(
 		modifier = Modifier.fillMaxWidth()
 	){
-		GoogleMap {  }
+		GoogleMap (
+			properties = MapProperties(
+				isMyLocationEnabled = true,
+				isBuildingEnabled = true,
+			)
+		) {  }
 		Button(onClick = { navController.navigate("login_screen") }) {}
 		Text("Dashboard Screen", modifier = Modifier.fillMaxWidth())
 	}
