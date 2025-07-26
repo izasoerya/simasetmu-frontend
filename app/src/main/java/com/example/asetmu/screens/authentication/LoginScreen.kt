@@ -97,8 +97,8 @@ fun LoginScreen(
 		TextButton(
 		    onClick = {
 				println("Go to Register Screen")
-		        navController.navigate("dashboard_screen") {
-		            popUpTo("dashboard_screen") { inclusive = true } // Clear the back stack
+		        navController.navigate("register_screen") {
+		            popUpTo("register_screen") { inclusive = true } // Clear the back stack
 		        }
 		    },
 			modifier = Modifier.fillMaxWidth()
